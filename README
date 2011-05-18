@@ -1,0 +1,3 @@
+An example of Update Controls for Silverlight. It teaches the concept of
+a navigation model for making a responsive UI, as opposed to the domino
+pattern of handling events.
