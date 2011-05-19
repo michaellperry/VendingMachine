@@ -5,8 +5,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
+	<UserControl.Resources>
+		<DataTemplate x:Key="ProductViewModelTemplate">
+			<StackPanel>
+				<TextBlock Text="{Binding Description}"/>
+			</StackPanel>
+		</DataTemplate>
+		<DataTemplate x:Key="OrderLineViewModelTemplate">
+			<Grid Width="201">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.429*"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="{Binding Name}" VerticalAlignment="Top" d:LayoutOverrides="Width"/>
+				<TextBlock Text="{Binding Quantity}" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Column="1" Margin="8,0" HorizontalAlignment="Right"/>
+			</Grid>
+		</DataTemplate>
+	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="White" d:DataContext="{d:DesignData /SampleData/VendingMachineViewModelSampleData.xaml}">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="0.432*"/>
+    		<ColumnDefinition Width="0.568*"/>
+    	</Grid.ColumnDefinitions>
+    	<ListBox ItemTemplate="{StaticResource ProductViewModelTemplate}" ItemsSource="{Binding Products}" Margin="9,8,8,8" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"/>
+    	<ListBox Grid.Column="1" ItemTemplate="{StaticResource OrderLineViewModelTemplate}" ItemsSource="{Binding OrderLines}" Margin="8"/>
 
     </Grid>
 </UserControl>

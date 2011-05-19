@@ -1,0 +1,76 @@
+<VendingMachine_Logic_ViewModels:VendingMachineViewModel xmlns:VendingMachine_Logic_ViewModels="clr-namespace:VendingMachine.Logic.ViewModels;assembly=VendingMachine.Logic" xmlns:VendingMachine_Logic_Models="clr-namespace:VendingMachine.Logic.Models;assembly=VendingMachine.Logic">
+	<VendingMachine_Logic_ViewModels:VendingMachineViewModel.OrderLines>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Vestibulum class aliquam curabitur aenean" Quantity="64"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Cras integer maecenas" Quantity="70"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Duis adipiscing nunc mauris" Quantity="45"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Parturient praesent curae amet ante" Quantity="44"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Vestibulum accumsan phasellus" Quantity="31"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Nullam donec" Quantity="25"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Vestibulum etiam bibendum quisque" Quantity="42"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Consequat aptent convallis dignissim" Quantity="74"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Nam dictumst" Quantity="33"/>
+		<VendingMachine_Logic_ViewModels:OrderLineViewModel Name="Adipiscing parturient vestibulum vivamus elementum" Quantity="10"/>
+	</VendingMachine_Logic_ViewModels:VendingMachineViewModel.OrderLines>
+	<VendingMachine_Logic_ViewModels:VendingMachineViewModel.Products>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Facilisis fusce">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Vestibulum arcu fermentum"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Diam auctor congue aliquam lorem">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Adipiscing parturient aliquet sed"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Blandit eleifend dis">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Est commodo"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Cursus eget">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Elit fringilla dictum hac vestibulum"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Lectus vestibulum conubia cubilia">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Adipiscing habitasse facilisi morbi libero"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Dapibus faucibus egestas">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Habitant enim ligula"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Parturient leo nulla hendrerit euismod">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Proin himenaeos litora"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Vestibulum imperdiet vestibulum augue">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Mus feugiat inceptos gravida"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Iaculis erat adipiscing malesuada lacinia">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Parturient nec luctus"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Eros nibh nisi interdum non">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Per laoreet magnis mattis vestibulum"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+	</VendingMachine_Logic_ViewModels:VendingMachineViewModel.Products>
+	<VendingMachine_Logic_ViewModels:VendingMachineViewModel.Quantity>
+		<VendingMachine_Logic_ViewModels:QuantityViewModel Quantity="45"/>
+	</VendingMachine_Logic_ViewModels:VendingMachineViewModel.Quantity>
+	<VendingMachine_Logic_ViewModels:VendingMachineViewModel.SelectedProduct>
+		<VendingMachine_Logic_ViewModels:ProductViewModel Description="Dolor nisl">
+			<VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+				<VendingMachine_Logic_Models:Product Description="Natoque posuere potenti pretium"/>
+			</VendingMachine_Logic_ViewModels:ProductViewModel.Product>
+		</VendingMachine_Logic_ViewModels:ProductViewModel>
+	</VendingMachine_Logic_ViewModels:VendingMachineViewModel.SelectedProduct>
+</VendingMachine_Logic_ViewModels:VendingMachineViewModel>

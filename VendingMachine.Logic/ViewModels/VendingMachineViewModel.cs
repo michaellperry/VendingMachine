@@ -32,8 +32,8 @@ namespace VendingMachine.Logic.ViewModels
 
         public ProductViewModel SelectedProduct
         {
-            get { return new ProductViewModel(_navigation.SelectedProduct); }
-            set { _navigation.SelectedProduct = value.Product; }
+            get { return _navigation.SelectedProduct == null ? null : new ProductViewModel(_navigation.SelectedProduct); }
+            set { _navigation.SelectedProduct = value == null ? null : value.Product; }
         }
 
         public QuantityViewModel Quantity
@@ -42,6 +42,11 @@ namespace VendingMachine.Logic.ViewModels
             {
                 return _navigation.SelectedProduct == null ? null : new QuantityViewModel(_navigation, _order);
             }
+        }
+
+        public bool QuantityVisible
+        {
+            get { return _navigation.SelectedProduct != null; }
         }
 
         public IEnumerable<OrderLineViewModel> OrderLines
