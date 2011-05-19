@@ -10,11 +10,13 @@ namespace VendingMachine.Logic.ViewModels
     public class VendingMachineViewModel
     {
         private Catalog _catalog;
+        private Order _order;
         private VendingMachineNavigationModel _navigation;
 
-        public VendingMachineViewModel(Catalog catalog, VendingMachineNavigationModel navigation)
+        public VendingMachineViewModel(Catalog catalog, Order order, VendingMachineNavigationModel navigation)
         {
             _catalog = catalog;
+            _order = order;
             _navigation = navigation;
         }
 
@@ -36,7 +38,19 @@ namespace VendingMachine.Logic.ViewModels
 
         public QuantityViewModel Quantity
         {
-            get { return _navigation.SelectedProduct == null ? null : new QuantityViewModel(); }
+            get
+            {
+                return _navigation.SelectedProduct == null ? null : new QuantityViewModel(_navigation, _order);
+            }
+        }
+
+        public IEnumerable<OrderLineViewModel> OrderLines
+        {
+            get
+            {
+                return _order.OrderLines
+                    .Select(orderLine => new OrderLineViewModel(orderLine));
+            }
         }
     }
 }

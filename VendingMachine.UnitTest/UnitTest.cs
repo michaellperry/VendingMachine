@@ -17,7 +17,12 @@ namespace VendingMachine.UnitTest
         [TestInitialize]
         public void Initialize()
         {
-            _viewModel = new VendingMachineViewModel(new Catalog().AddProduct("Doritos").AddProduct("Cheezits"), new VendingMachineNavigationModel());
+            _viewModel = new VendingMachineViewModel(
+                new Catalog()
+                    .AddProduct("Doritos")
+                    .AddProduct("Cheezits"),
+                new Order(),
+                new VendingMachineNavigationModel());
         }
 
         [TestMethod]
@@ -49,6 +54,27 @@ namespace VendingMachine.UnitTest
             _viewModel.SelectedProduct = _viewModel.Products.First();
 
             Assert.IsNotNull(_viewModel.Quantity);
+        }
+
+        [TestMethod]
+        public void CanEnterQuantityAndCreateOrderLine()
+        {
+            _viewModel.SelectedProduct = _viewModel.Products.First();
+            _viewModel.Quantity.Quantity = 3;
+            _viewModel.Quantity.Add.Execute(null);
+            Assert.AreEqual(1, _viewModel.OrderLines.Count());
+            Assert.AreEqual("Doritos", _viewModel.OrderLines.Single().Name);
+            Assert.AreEqual(3, _viewModel.OrderLines.Single().Quantity);
+        }
+
+        [TestMethod]
+        public void WhenOrderLineIsAdded_QuantityCloses()
+        {
+            _viewModel.SelectedProduct = _viewModel.Products.First();
+            _viewModel.Quantity.Quantity = 3;
+            _viewModel.Quantity.Add.Execute(null);
+
+            Assert.IsNull(_viewModel.Quantity);
         }
     }
 }
